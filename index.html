@@ -1,34 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Blog de viagem</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>Todo Avançado</title>
   </head>
   <body>
-    <nav id="container">
-      <div class="sub-conteiner">
-        <ul class="li-Box">
-        <ion-icon name="airplane-outline"></ion-icon>
-          <li>home</li>
-          <li>reservas</li>
-          <li>como chegar</li>
-          <li>tarifas</li>
-          <li>parceiros</li>
-          <img src="./pexels/pexels-nesrin-öztürk-19380853.jpg" alt="logo" />
-        </ul>
+    <div class="todo-container">
+      <header>
+        <h1>Todo Avançado</h1>
+      </header>
+      <form id="todo-form">
+        <p>Adicionar a sua tarefa:</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="O que voce vai fazer?"
+          />
+          <button type="submite">
+            <ion-icon name="add-outline"></ion-icon>
+          </button>
+        </div>
+      </form>
+      <form class="edit-form">
+        <div class="form-control">
+          <p>Edite a sua tarefa</p>
+          <input type="text" id="edit-input" />
+          <button type="submit">
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+          </button>
+        </div>
+        <button id="cancel-edit-btn">cancelar</button>
+      </form>
+      <div id="toolbar">
+        <div id="search">
+          <h4>Pesquisar</h4>
+          <form>
+            <input type="text" id="search-input" placeholder="Buscar" />
+            <button id="erase-button">
+              <ion-icon name="caret-back-outline"></ion-icon>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <h4>filter:</h4>
+          <select id="filter-select">
+            <option value="all">todos</option>
+            <option value="done">Feitos</option>
+            <option value="Todo">a fazer?</option>
+          </select>
+        </div>
       </div>
-    </nav>
-
-    <div>
-      <h1>Melhores blogs sobre turismo para você explorar</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vel similique debitis minima alias! Exercitationem, esse earum. Pariatur odit, blanditiis vitae mollitia, in voluptate, obcaecati fuga provident earum libero placeat!</p>
-      
+      <div id="todo-list">
+        <div class="todo">
+          <h3>Estou fazendo alguma coisa...</h3>
+          <button class="finish-todo">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+          <button class="edit-todo">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </button>
+          <button class="remove-todo">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="todo">
+          <h3>Estudar JavaScript</h3>
+          <button class="finish-todo">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+          <button class="edit-todo">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </button>
+          <button class="remove-todo">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
     </div>
 
-         <script type ="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
-         <script nomodule src ="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-       </script>
+    <!--Font Awesome-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
